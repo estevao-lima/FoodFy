@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+
+    {% block head %}
+
+      <title>FoodFy</title>
+
+    {% endblock %}
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/assets/icon-burger.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/styles.css">
+
+  </head>
+
+  <body>
+
+    <div class="page-wrapper">
+
+      <header>
+        <a href="/"><img src="/assets/logo.png">
+        </a>
+        <a href="/sobre">Sobre</a>
+        <a href="/recipes">Receitas</a>
+      </header>
+
+      {% block content %}{% endblock %}
+
+    </div>
+
+    <footer>
+      <p>Todos direitos reservados, receitas Foodfy</p>
+    </footer>
+
+  </body>
+
+</html>
