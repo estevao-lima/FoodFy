@@ -4,54 +4,51 @@
 
   <title>FoodFy - Home</title>
 
-{% endblock%}
+  {% endblock%}
 
-{% block content %}
+  {% block content %}
 
-<div class="container">
-  <div class="container-title">
-    <h2>As melhores receitas</h2>
-    <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
-  </div>
-</div>
-<main>
-  <h2>Mais acessadas</h2>
+    <div class="container">
 
-
-  <div class="cards">
-
-    {% for item in items %}
-
-          <div class="card" id="{{item.id}}">
-            <img src="/assets/{{item.id}}.png" alt="Imagem de {{item.title}}">
-            <h4>{{item.title}}</h4>
-            <p>{{item.author}}</p>
-          </div>
-          
-    {% endfor %}
-
-  </div>
-
-  <footer>
-    <p>Todos direitos reservados, receitas Foodfy</p>
-  </footer>
-</main>
-
-<div class="modal-overlay">
-  <div class="modal">
-    <a class="close-modal">
-      <p>Fechar Modal</p>
-    </a>
-
-    <div class="modal-info">
-      <img src="/assets/burger.png" alt="triplo bacon burguer">
-      <h4>Triplo bacon burger</h4>
-      <p>por Jorge Relato</p>
+      <div class="container-title">
+        <h2>As melhores receitas</h2>
+        <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
+      </div>
     </div>
-  </div>
-</div>
+    <main>
+      <h2>Mais acessadas</h2>
 
+      <div class="cards">
 
-<script src="/js/scripts.js"></script>
+        {% for item in items %}
+          <div class="card">
+            <div id="{{ loop.index0 }}">
 
-{% endblock %}
+              <img src="{{item.image}}" alt="Foto da receita {{item.title}}" id="{{ loop.index0 }}">
+
+              <h3 id="{{ loop.index0 }}">{{item.title}}</h3>
+              <p>{{item.author}}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+    </main>
+
+    <div class="modal-overlay">
+      <div class="modal">
+        <a class="close-modal">
+          <p>Fechar Modal</p>
+        </a>
+
+        <div class="modal-info">
+          <img src="/assets/burger.png" alt="triplo bacon burguer">
+          <h4>Triplo bacon burger</h4>
+          <p>por Jorge Relato</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/scripts.js"></script>
+
+  {% endblock %}
