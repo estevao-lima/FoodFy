@@ -26,10 +26,9 @@ server.get("/recipes", function(req, res) {
 })
 
 server.get("/recipes/:index", function (req, res) {
-
-console.log(recipeData = [...recipes]) // Array de receitas carregadas do data.js
+recipeData = [...recipes] // Array de receitas carregadas do data.js
 const recipeIndex = req.params.index
-console.log(recipe = recipeData[recipeIndex])
+recipe = recipeData[recipeIndex]
 
 return res.render('recipe', { items: recipe } )
 })
