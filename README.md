@@ -4,7 +4,7 @@ FoodFy is a web dev exercise from [Rocketseat.](https://rocketseat.com.br/.)
 
 ## Development
 
-In this project i used HTML5, CSS3, Javascript, NodeJS and PostgreSQL. Throughout the building phase, i learned everything from structuring elements with CSS, to making the final adjustments to tables in a database with Postgre. 
+In this project i used HTML5, CSS3, Javascript, NodeJS. Throughout the building phase, i learned everything from structuring elements with CSS, to understanding a little bit better how Javascript works. 
 
 ## Usage
 
